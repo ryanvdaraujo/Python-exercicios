@@ -1,0 +1,91 @@
+#exercício 1
+from random import randint, sample
+numeros = sample(range(1, 100), 10)
+menor = numeros[0]
+maior = numeros[0]
+
+for numero in numeros:
+    if numero > maior:
+        maior = numero
+    if numero < menor:
+        menor = numero
+
+print(numeros)
+print(f'esse é o numero maior {maior}')
+print(f'esse é o numero menor {menor}')
+
+print()
+    
+#exercício 2
+from random import randint, sample
+numeros = sample(range(1 , 100), 20)
+par = []
+impar = []
+for numero in numeros:
+    if numero % 2 == 0:
+        par.append(numero)
+    else:
+        impar.append(numero)
+print(impar)
+print(par)
+print(numeros)
+
+
+#exercício 3
+
+from random import randint, sample
+v1 = sample(range(1 , 100), 10)
+v2 = sample(range(1 , 100), 10)
+v3 = []
+k = 0
+while k < 10:
+    v3.append(v1[k])
+    v3.append(v2[k])
+    k+=1
+print(v1)
+print(v2)
+print(v3)
+print(k)
+print(len(v3))
+
+
+#exercício 4
+
+texto = ('''The Python Software Foundation and the global Python community welcome and encourage participation by everyone.
+Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles.
+We want our community to be more diverse: whoever you are, and whatever your background, we welcome you''')
+texto = texto.lower()
+texto = texto.replace('.', '')
+texto = texto.replace(',', '')
+texto = texto.replace(':', '')
+texto = texto.split( )
+palavras = []
+
+for c in texto:
+    if c[0] in 'python' or c[-1] in 'python':
+        palavras.append(c)
+
+print(palavras)
+
+
+#exercício 5
+
+texto = ('''The Python Software Foundation and the global Python community welcome and encourage participation by everyone.
+Our community is based on mutual respect, tolerance, and encouragement, and we are working to help each other live up to these principles.
+We want our community to be more diverse: whoever you are, and whatever your background, we welcome you''')
+texto = texto.lower()
+texto = texto.replace('.', '')
+texto = texto.replace(',', '')
+texto = texto.replace(':', '')
+texto = texto.split( )
+palavras = []
+
+for c in texto:
+    k=0
+    while k < len(c):
+        if c[k] in 'python' and len(c)>4:
+            palavras.append(c)
+            break
+        k+=1
+        
+print(palavras)
